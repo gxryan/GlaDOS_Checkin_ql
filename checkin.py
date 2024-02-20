@@ -82,7 +82,7 @@ def checkin(cookie):
     try:
         mess = checkin.json()['message']
         mail = state.json()['data']['email']
-        time = state.json()['data']['leftDays'].split('.')[0]
+        time = state.json()['data']['leftDays']
     except Exception as e:
         print(f"解析登录结果失败：{e}")
         return None, None, None
